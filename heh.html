@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Информация о студентах</title>
+    <style>
+        #b {
+            text-align: center;
+        }
+        .form{
+            min-height: 30px;
+            padding-left: 10px;
+            font-size: 18px;
+            border-radius: 7px;
+        }
+        .rm:hover, .add:hover, .submit:hover, .close:hover, .edit:hover {
+            background: #1d49aa;
+        }
+        .rm, .add, .submit, .close, .edit{
+            min-width: 100px;
+            min-height: 25px;
+            padding: 0 20px;
+            font-size: 15px;
+            background: #1E90FF;
+            color: white;
+            border: 0;
+            border-radius: 15px;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #FDF5E6;
+        }
+
+        #dt {
+            text-align: center;
+        }
+        table{
+            border: 0;
+            position: relative;
+            margin: 15px;
+            display: inline-block;
+            border-collapse: collapse;
+        }
+        td {
+            background: #FFF;
+            font-size: 20px;
+            padding: 5px 10px;
+            border: 2px solid;
+        }
+        th {
+            border: 2px solid black;
+            font-size: 20px;
+            padding: 5px;
+            background: #1E90FF;
+            color: white;
+        }
+        #fcenter {
+            display: none;
+            width: 100%;
+            height: 50%;
+            margin: auto;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        #forma {
+            margin: 15px;
+            padding: 15px 10px;
+            display: inline-block;
+            border: 2px solid;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 3px 3px 15px 0 #000000;
+        }
+        #dcenter {
+            display: none;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 3;
+        }
+        #delete {
+            font-size: 18px;
+            margin-top: 77px;
+            border: 2px solid black;
+            border-radius: 15px;
+            display: inline-block;
+            padding: 10px 10px;
+            background: white;
+            box-shadow: 3px 3px 15px 0px #000000;
+        }
+    </style>
+</head>
+<body>
+<div id="dt">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Ф.И.О. студента</th>
+            <th>Группа</th>
+            <th>Номер телефона</th>
+            <th>E-mail</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table></div>
+<div id="b"><div>
+    <input id="but7" class="add" type="button" value="Добавить">
+</div></div>
+<div id="fcenter"><form id="forma" class="form" method="post" enctype="multipart/form-data">
+    <input type="hidden" id="Id" value="-1">
+    <input id="name" class="form" type="text" value="" placeholder="Ф.И.О." size="50"><br/><br/>
+    <input id="group" class="form" type="text" value="" placeholder="Группа" size="50"><br/><br/>
+    <input id="phone" class="form" type="text" value="" placeholder="Номер телефона" size="50"><br/><br/>
+    <input id="email" class="form" type="email" value="" placeholder="E-mail" size="50"><br/><br/>
+    <input id="but8" class="submit" data-func="submit" type="button" value="Сохранить">
+    <input data-id="fcenter" class="close" type="button" value="Отмена">
+</form></div>
+<div id="dcenter"><div id="delete">Вы действительно хотите удалить данные?<br/><br/>
+    <input id="but10" class="submit" data-func="remove" type="button" value="Да">
+    <input data-id="dcenter" class="close" type="button" value="Нет">
+</div></div>
+</body>
+<script src="Dolbany JS.js"></script>
+</html>
