@@ -4,6 +4,7 @@ const data = (new function(){
     this.create = obj => {
         obj.Id = int++;
         arr[obj.Id] = obj;
+        util.ajax({method:"POST", url:"/", data: JSON.stringify(obj)});
         return obj;
     }
     this.getAll = () => {
@@ -12,6 +13,7 @@ const data = (new function(){
     this.get = id => arr[id];
     this.update = obj => {
         arr[obj.Id] = obj;
+        util.ajax({method:"PUT", url:"/", data: JSON.stringify(obj)});
         return obj;
     }
     this.delete = id => {
