@@ -20,6 +20,9 @@ const data = (new function(){
 });
 
 const util = new function() {
+    this.ajax = (params, callback) => {
+        return fetch(params).then(data => data.toJSON()).then(callback);
+    }
     this.parse = (tpl, obj) => {
         let str = tpl;
         for (let k in obj) {
