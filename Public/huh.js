@@ -1,6 +1,11 @@
 const data = (new function(){
     let int = 0;
     const arr = {};
+    const init = () => {
+        util.ajax({method:"GET", url: "/"}, data => {
+            console.log(data);
+        });
+    }
     this.create = obj => {
         obj.Id = int++;
         arr[obj.Id] = obj;
