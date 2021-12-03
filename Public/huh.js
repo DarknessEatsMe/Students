@@ -81,6 +81,7 @@ const student = new function() {
             });
         });
     };
+    window.addEventListener("load", init);
     const add = () => {
         util.q("#fcenter form")[0].reset();
         util.id("Id").value = "-1";
@@ -139,5 +140,4 @@ const student = new function() {
         </td>
         </tr>
     `;
-    window.addEventListener("load", init);
 }
