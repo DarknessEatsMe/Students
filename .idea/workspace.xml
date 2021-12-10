@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b67aa01c-e506-4443-bd0f-28c651c72aa0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/heh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/huh.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/huh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/somethingNew/refs/heads/main" beforeDir="false" afterPath="$PROJECT_DIR$/somethingNew/refs/heads/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +32,44 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.13.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="16.11.11" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Darkn\IdeaProjects\something\Public" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="C:/Users/Darkn/IdeaProjects/something" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.C:/Users/Darkn/IdeaProjects/something" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,7 +81,9 @@
       <updated>1638562633889</updated>
       <workItem from="1638562635289" duration="649000" />
       <workItem from="1638563938615" duration="772000" />
-      <workItem from="1638564718171" duration="691000" />
+      <workItem from="1638564718171" duration="1193000" />
+      <workItem from="1639162552936" duration="8000" />
+      <workItem from="1639162659221" duration="2734000" />
     </task>
     <task id="LOCAL-00001" summary="Callback">
       <created>1638562872329</created>
@@ -85,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638563435795</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mv listener">
+      <created>1638565568454</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638565568454</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +151,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="space" />
     <MESSAGE value="iml ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="iml ignore" />
+    <MESSAGE value="mv listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="mv listener" />
   </component>
 </project>
