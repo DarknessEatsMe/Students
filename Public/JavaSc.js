@@ -2,14 +2,14 @@ const data = (new function(){
     let int = 0;
     const arr = {};
     this.init = () => {
-        util.ajax({method:"GET", url: "/student"}, data => {
+        util.ajax({method:"GET"}, data => {
             console.log(data);
         });
     }
     this.create = obj => {
         obj.Id = int++;
         arr[obj.Id] = obj;
-        util.ajax({method:"POST", url:"/student", data: JSON.stringify(obj)});
+        util.ajax({method:"POST", data: JSON.stringify(obj)});
         return obj;
     }
     this.getAll = () => {
@@ -18,7 +18,7 @@ const data = (new function(){
     this.get = id => arr[id];
     this.update = obj => {
         arr[obj.Id] = obj;
-        util.ajax({method:"PUT", url:"/student", data: JSON.stringify(obj)});
+        util.ajax({method:"PUT", data: JSON.stringify(obj)});
         return obj;
     }
     this.delete = id => {
@@ -28,7 +28,7 @@ const data = (new function(){
 
 const util = new function() {
     this.ajax = (params, callback) => {
-        fetch(params).then(data => data.toJson()).then(callback);
+        fetch("/student", params).then(data => data.toJson()).then(callback);
     }
     this.parse = (tpl, obj) => {
         let str = tpl;
@@ -88,7 +88,6 @@ const student = new function() {
             });
         });
     };
-    window.addEventListener("load", init);
     const add = () => {
         util.q("#fcenter form")[0].reset();
         util.id("Id").value = "-1";
@@ -147,4 +146,5 @@ const student = new function() {
         </td>
         </tr>
     `;
+    window.addEventListener("load", init);
 }

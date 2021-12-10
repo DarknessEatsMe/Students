@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b67aa01c-e506-4443-bd0f-28c651c72aa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/huh.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/huh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/huh.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +81,7 @@
       <workItem from="1638564718171" duration="1193000" />
       <workItem from="1639162552936" duration="8000" />
       <workItem from="1639162659221" duration="3852000" />
+      <workItem from="1639166590359" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="Callback">
       <created>1638562872329</created>
