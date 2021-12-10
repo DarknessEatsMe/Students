@@ -2,14 +2,14 @@ const data = (new function(){
     let int = 0;
     const arr = {};
     this.init = () => {
-        util.ajax({method:"GET", url: "/"}, data => {
+        util.ajax({method:"GET", url: "/student"}, data => {
             console.log(data);
         });
     }
     this.create = obj => {
         obj.Id = int++;
         arr[obj.Id] = obj;
-        util.ajax({method:"POST", url:"/", data: JSON.stringify(obj)});
+        util.ajax({method:"POST", url:"/student", data: JSON.stringify(obj)});
         return obj;
     }
     this.getAll = () => {
@@ -18,7 +18,7 @@ const data = (new function(){
     this.get = id => arr[id];
     this.update = obj => {
         arr[obj.Id] = obj;
-        util.ajax({method:"PUT", url:"/", data: JSON.stringify(obj)});
+        util.ajax({method:"PUT", url:"/student", data: JSON.stringify(obj)});
         return obj;
     }
     this.delete = id => {
@@ -28,7 +28,7 @@ const data = (new function(){
 
 const util = new function() {
     this.ajax = (params, callback) => {
-        fetch(params).then(data => data.toJSON()).then(callback);
+        fetch(params).then(data => data.toJson()).then(callback);
     }
     this.parse = (tpl, obj) => {
         let str = tpl;
@@ -42,6 +42,13 @@ const util = new function() {
     this.listen = (el, type, callback) => el.addEventListener(type, callback);
 }
 
+data.create({
+    name: "Вова",
+    group: "ПГС-12",
+    phone: "89607562345",
+    email: "vova@gmail.com"
+});
+
 const student = new function() {
     this.submit = () => {
         const st = {
@@ -50,7 +57,7 @@ const student = new function() {
             phone: util.id("phone").value,
             email: util.id("email").value,
         };
-        if (util.id("Id").value == "-1") data.create(st)
+        if (util.id("Id").value === "-1") data.create(st)
         else {
             st.Id = util.id("Id").value;
             data.update(st);
