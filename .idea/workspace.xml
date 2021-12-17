@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b67aa01c-e506-4443-bd0f-28c651c72aa0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/JavaSc.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/JavaScr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud.js" beforeDir="false" afterPath="$PROJECT_DIR$/crud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository.js" afterDir="false" />
-    </list>
+    <list default="true" id="b67aa01c-e506-4443-bd0f-28c651c72aa0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +85,9 @@
       <workItem from="1639166590359" duration="11260000" />
       <workItem from="1639429943456" duration="8912000" />
       <workItem from="1639730352746" duration="25000" />
+      <workItem from="1639731493910" duration="436000" />
+      <workItem from="1639741090324" duration="645000" />
+      <workItem from="1639758763143" duration="2039000" />
     </task>
     <task id="LOCAL-00001" summary="Callback">
       <created>1638562872329</created>
@@ -149,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639168271608</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="save">
+      <created>1639731595901</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639731595901</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +190,7 @@
     <MESSAGE value="mv listener" />
     <MESSAGE value="change fetch" />
     <MESSAGE value="- url" />
-    <option name="LAST_COMMIT_MESSAGE" value="- url" />
+    <MESSAGE value="save" />
+    <option name="LAST_COMMIT_MESSAGE" value="save" />
   </component>
 </project>
