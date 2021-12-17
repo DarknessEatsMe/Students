@@ -1,13 +1,22 @@
 const http = require("http"),
     crud = require("./crud"),
-    static = require("node-static");
+    staticSrv = require("node-static");
 
-const staticFileDir = new static.Server("./Public");
+const staticFileDir = new staticSrv.Server("./Public");
 
 const echo = (res, content) => {
     res.end(JSON.stringify(content));
 }
-
+/*
+for(let num = 0; num < 10; num++){
+    crud.create({
+        name: "Вова"+num,
+        group: "ПГС-12",
+        phone: "666-66"+num,
+        email: "vova"+num+"@gmail.com"
+    });
+}
+ */
 const student = (req, res) => {
     res.writeHead(200, {"Content-type": "application/json"});
     const url = req.url.substring(1).split("/");
@@ -34,8 +43,9 @@ const student = (req, res) => {
             else
             echo(res, {error: "Не передан id"});
             break;
+            default:
+                echo(res, {error: "500"});
     }
-    echo(res, {error: "500"})
 }
 
 const getAsyncData = (req, callback) => {
@@ -54,6 +64,6 @@ const handler = function (req, res) {
     staticFileDir.serve(req, res);
 }
 
-http.createServer(handler).listen(8090, ()=>{
+http.createServer(handler).listen(8094, ()=>{
     console.log("run")
 })

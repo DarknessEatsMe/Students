@@ -1,15 +1,20 @@
 const data = (new function(){
     let int = 0;
     const arr = {};
-    this.init = () => {
+    this.init = (callback) => {
         util.ajax({method:"GET"}, data => {
-            console.log(data);
+            data.map(std => {
+                arr[std.Id] = std;
+                int = std.Id;
+            });
+            int++
+            if (typeof callback == "function") callback();
         });
     }
     this.create = obj => {
         obj.Id = int++;
         arr[obj.Id] = obj;
-        util.ajax({method:"POST", data: JSON.stringify(obj)});
+        util.ajax({method:"POST", body: JSON.stringify(obj)});
         return obj;
     }
     this.getAll = () => {
@@ -18,17 +23,24 @@ const data = (new function(){
     this.get = id => arr[id];
     this.update = obj => {
         arr[obj.Id] = obj;
-        util.ajax({method:"PUT", data: JSON.stringify(obj)});
+        util.ajax({method:"PUT", body: JSON.stringify(obj)});
         return obj;
     }
     this.delete = id => {
         delete arr[id];
+        util.ajax({method:"DELETE", path: "/" + id});
+
     }
 });
 
 const util = new function() {
     this.ajax = (params, callback) => {
-        fetch("/student", params).then(data => data.toJson()).then(callback);
+        let url = "";
+        if(params.path != undefined) {
+            url = params.path;
+            delete params.path;
+        }
+        fetch("/student"+url, params).then(data => data.json()).then(callback);
     }
     this.parse = (tpl, obj) => {
         let str = tpl;
@@ -41,13 +53,6 @@ const util = new function() {
     this.q = el => document.querySelectorAll(el);
     this.listen = (el, type, callback) => el.addEventListener(type, callback);
 }
-
-data.create({
-    name: "Вова",
-    group: "ПГС-12",
-    phone: "89607562345",
-    email: "vova@gmail.com"
-});
 
 const student = new function() {
     this.submit = () => {
@@ -72,8 +77,9 @@ const student = new function() {
         util.id("dcenter").style.display = "none"
     }
     const init = () => {
-        data.init();
-        this.render();
+        data.init(() => {
+            this.render();
+        });
         util.q(".add").forEach(el=>{
             util.listen(el, "click", add);
         });
